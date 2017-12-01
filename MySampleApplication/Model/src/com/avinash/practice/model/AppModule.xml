@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="DepartmentsView1"
+    ViewObjectName="com.avinash.practice.model.DepartmentsView"/>
+  <ViewUsage
+    Name="EmployeesView1"
+    ViewObjectName="com.avinash.practice.model.EmployeesView"/>
+  <ViewUsage
+    Name="DepartmentsView2"
+    ViewObjectName="com.avinash.practice.model.DepartmentsView"/>
+  <ViewUsage
+    Name="EmployeesView2"
+    ViewObjectName="com.avinash.practice.model.EmployeesView"/>
+  <ViewUsage
+    Name="EmployeesView3"
+    ViewObjectName="com.avinash.practice.model.EmployeesView"/>
+  <ViewLinkUsage
+    Name="DeptMgrFkLink1"
+    ViewLinkObjectName="com.avinash.practice.model.DeptMgrFkLink"
+    SrcViewUsageName="com.avinash.practice.model.AppModule.EmployeesView1"
+    DstViewUsageName="com.avinash.practice.model.AppModule.DepartmentsView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkLink1"
+    ViewLinkObjectName="com.avinash.practice.model.EmpManagerFkLink"
+    SrcViewUsageName="com.avinash.practice.model.AppModule.EmployeesView1"
+    DstViewUsageName="com.avinash.practice.model.AppModule.EmployeesView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpDeptFkLink1"
+    ViewLinkObjectName="com.avinash.practice.model.EmpDeptFkLink"
+    SrcViewUsageName="com.avinash.practice.model.AppModule.DepartmentsView1"
+    DstViewUsageName="com.avinash.practice.model.AppModule.EmployeesView3"
+    Reversed="false"/>
+</AppModule>
